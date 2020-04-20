@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 
+import Subtotal from './components/Subtotal/Subtotal'
+import PickupSavings from './components/PickupSavings/PickupSaving';
+
 const Grid = styled.div`
 width: 350px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -14,11 +17,20 @@ justify-content: center;
 `
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    total: 100,
+    pickupSavings: -3.3
+    }
+  }
+
   render() {
   return (
     <Wrapper>
       <Grid>
-        <h2>hello world</h2>
+        <Subtotal price={this.state.total.toFixed(2)}/>
+        <PickupSavings price={this.state.pickupSavings.toFixed(2)}/>
       </Grid>
 
     </Wrapper>
