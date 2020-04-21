@@ -39,7 +39,8 @@ class App extends React.Component {
         <TaxesFees taxes={this.state.taxes.toFixed(2)}/>
         <hr />
         <EstimatedTotal price={this.state.EstimatedTotal.toFixed(2)}/>
-        <ItemDetails />
+        <ItemDetails price={this.state.EstimatedTotal.toFixed(2)}/>
+        <hr />
       </Grid>
 
     </Wrapper>
