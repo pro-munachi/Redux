@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Subtotal from './components/Subtotal/Subtotal'
 import PickupSavings from './components/PickupSavings/PickupSaving';
+import TaxesFees from './components/TaxesFees/TaxesFess';
+import EstimatedTotal from './components/EstimatedTotal/EstimatedTotal';
 
 const Grid = styled.div`
 width: 350px;
@@ -21,7 +23,9 @@ class App extends React.Component {
     super(props)
     this.state = {
     total: 100,
-    pickupSavings: -3.3
+    pickupSavings: -3.3,
+    taxes: 0,
+    EstimatedTotal: 0,
     }
   }
 
@@ -31,6 +35,9 @@ class App extends React.Component {
       <Grid>
         <Subtotal price={this.state.total.toFixed(2)}/>
         <PickupSavings price={this.state.pickupSavings.toFixed(2)}/>
+        <TaxesFees taxes={this.state.taxes.toFixed(2)}/>
+        <hr />
+        <EstimatedTotal price={this.state.EstimatedTotal.toFixed(2)}/>
       </Grid>
 
     </Wrapper>

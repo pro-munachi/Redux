@@ -6,22 +6,22 @@ display: flex;
 justify-content: space-between;
 padding-bottom: 1.5em;
 `
+
 const Col = styled.div `
 
 `
 
-class Subtotal extends React.Component {
+class TaxesFees extends React.Component {
     render() {
         return (
             <div>
-              <Row>
-                  <Col md={6}>Subtotal</Col>
-                  <Col md={6}> {`$${this.props.price}`} </Col>
-              </Row>
+                <Row>
+                    <Col>Est. taxes & fees<br /> (Based on 94085)</Col>
+        <Col>{`$${this.props.taxes}`}</Col>
+                </Row>
             </div>
         )
     }
 }
 
-export default Subtotal
-
+export default TaxesFees

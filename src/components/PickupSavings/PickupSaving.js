@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const Row = styled.div `
 display: flex;
 justify-content: space-between;
+padding-bottom: 1.5em;
 `
 
 const Col = styled.div `
@@ -15,7 +16,12 @@ font-weight: 800;
 `
 const Des = styled.p `
 font-style: italic;
-color: red;
+color: white;
+background: black;
+position: fixed;
+float: right;
+width: 18%;
+text-align: center;
 `
 
 function useHover() {
@@ -30,7 +36,7 @@ function useHover() {
     ref.current.addEventListener('mouseleave', leave)
     return () => {
         ref.current.removeEventListener('mouseenter', enter)
-        ref.current.removeEventListener('mouseenter', enter)
+        ref.current.removeEventListener('mouseleave', leave)
     }
     },
     [ref]
