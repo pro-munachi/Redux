@@ -12,20 +12,33 @@ const Well = styled.div`
 
 `
 const Media = styled.div `
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+border-style: ridge;
+background: ivory ;
+color: gray;
+` 
+const Images = styled.img `
+margin-top: 3px;
+margin-left: 4px;
+color: gray;
 
 `
+
 const Medialeft = styled.div `
 
 `
 const MediaBody = styled.div `
-
+margin: 1em 1em 1em 1em;
 `
 const Stroong = styled.strong `
 text-decoration-line: line-through;
 color: gray;
 `
 const Row = styled.div `
-
+display: flex;
+justify-content: space-evenly
 `
 const Col = styled.div `
 
@@ -52,13 +65,13 @@ class ItemDetails extends React.Component {
               <Well>
                   <Media>
                       <Medialeft>
-                    <img  src='/Asset/Img/download.jpeg' 
+                    <Images  src='/Asset/Img/imagess.jpeg' 
                     alt='thumbnail' 
                     width={100} 
                     height={100}/>
                      </Medialeft>
                      <MediaBody>
-                         <p>blonde wig</p>
+                         <em>Apple Macbook Pro</em>
                          <Row>
                              <Col>
               <strong>{`$${this.props.price}`}</strong><br />
