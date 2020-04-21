@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Wrapper = styled.div `
+font-style: san
+`
 const Collapse = styled.div `
 height: 100%;
 width: 100%;
@@ -53,7 +56,7 @@ class ItemDetails extends React.Component {
     }
     render() {
         return (
-            <div>
+            <Wrapper>
               <button 
               onClick={() => this.setState({open: !this.state.open})}
               >
@@ -84,7 +87,7 @@ class ItemDetails extends React.Component {
               </Well>  
                  </Collapse>}
              </div>
-            </div>
+            </Wrapper>
         )
     }
 }
