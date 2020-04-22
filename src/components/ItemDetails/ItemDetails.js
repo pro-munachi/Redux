@@ -19,8 +19,8 @@ display: flex;
 justify-content: space-between;
 margin-top: 10px;
 border-style: ridge;
-background: ivory ;
-color: gray;
+background: #d1d1d1 ;
+
 ` 
 const Images = styled.img `
 margin-top: 3px;
@@ -74,7 +74,7 @@ class ItemDetails extends React.Component {
                     height={100}/>
                      </Medialeft>
                      <MediaBody>
-                         <em>Apple Macbook Pro</em>
+                         <em>Apple Macbook Pro 2015</em>
                          <Row>
                              <Col>
               <strong>{`$${this.props.price}`}</strong><br />

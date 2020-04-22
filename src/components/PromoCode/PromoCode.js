@@ -12,6 +12,30 @@ const Row = styled.div `
 const Col = styled.div `
 
 `
+const Forminput = styled.input `
+border: 5px solid white;
+box-shadow: 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+padding: 15px;
+background: rgba(255, 255,255,0.5);
+margin: 0 0 10px 0;
+width: 88.5%;
+text-align: center;
+background-color: #d1d1d1;
+`
+const Button1 = styled.button `
+background-color: #4CAF50;
+color: white;
+border: none;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+width: 100%;
+`
+const Forms = styled.form `
+
+`
 
 class PromoCode extends React.Component {
     constructor(props) {
@@ -33,21 +57,21 @@ class PromoCode extends React.Component {
           {this.state.open && <Collapse>
           <Row>
               <Col>
-              <form>
-                  <label>
+              <Forms>
+                  
                       <h1>Promo Code</h1>
-                      <input 
+                      <Forminput 
                       type='text'
                       placeholder='Enter Promo Code'
                       value={this.props.promoCode}
                       onChange={this.handleChange}
                       />
-                  </label><br />
-                  <button
+                  <br />
+                  <Button1
                   disabled={this.props.isDisabled}
                   onClick={this.props.giveDiscount}
-                  >Apply</button>
-              </form>
+                  >Apply</Button1>
+              </Forms>
               </Col>
           </Row>
           </Collapse>}
