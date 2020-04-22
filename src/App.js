@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import './App.css'
 
 import Subtotal from './components/Subtotal/Subtotal'
 import PickupSavings from './components/PickupSavings/PickupSaving';
@@ -9,6 +10,7 @@ import ItemDetails from './components/ItemDetails/ItemDetails';
 import PromoCode from './components/PromoCode/PromoCode';
 import {connect} from 'react-redux'
 import { handleChange } from './actions/promoCodeActions'
+import Header from './components/Header/Header';
 
 const Grid = styled.div`
 width: 350px;
@@ -63,7 +65,11 @@ class App extends React.Component {
   render() {
   return (
     <Wrapper>
+      
       <Grid>
+        <div>
+        <Header /><br /><br />
+        </div>
         <Subtotal price={this.state.total.toFixed(2)}/>
         <PickupSavings price={this.state.pickupSavings.toFixed(2)}/>
         <TaxesFees taxes={this.state.taxes.toFixed(2)}/>

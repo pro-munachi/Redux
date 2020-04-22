@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.Header {
+  background: teal;
+  text-align: center;
+  color: white;
+}
+
+.Anim {
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 2.5rem;
+  animation-name: head;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes head{
+  0% {color: teal;}
+  50% {color: black}
+  100% {color: white}
+}

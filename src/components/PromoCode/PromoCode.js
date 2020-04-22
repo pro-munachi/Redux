@@ -21,6 +21,7 @@ margin: 0 0 10px 0;
 width: 88.5%;
 text-align: center;
 background-color: #d1d1d1;
+border-radius: 1.5em;
 `
 const Button1 = styled.button `
 background-color: #4CAF50;
